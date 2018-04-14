@@ -1,8 +1,19 @@
-// const petsCard = document.getElementsByClassName('pet');
+const petsCard = document.getElementsByClassName('pet');
 
-// const showHighlight = (e) => {
-//   const petName = e.target;
-// };
+const unFilterSelectedPet = (e) => {
+  const petName = e.target;
+  console.log(petName);
+  petName.style.display = "inline";
+
+};
+
+const addEvents = () =>{
+const catButton = document
+  for (let i = 0; i < petsCard.length; i++) {
+  
+  }
+}
+
 
 // const addEvents = () => {
 //   for (let i = 0; i < petsCard.length)

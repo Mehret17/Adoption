@@ -1,3 +1,42 @@
+
+
 body {
+    margin: 50px;
     background-color: lightpink;
 }
+
+.petImage{
+    width: 50%;
+    border: 1px solid lightgray;
+}
+#catButton {
+    background-color:lightblue;
+    color: white;
+    margin-right: 20px;
+
+}
+
+#dogButton {
+    background-color: lightgreen;
+    color: white;
+    margin-right: 20px;
+
+}
+#dinoButton {
+    background-color: lightsalmon;
+    color: white;
+    margin-right: 20px;
+
+}
+
+.panel {
+    /* border: solid 1px lightgray; */
+    text-align: center;
+    height: 300px;
+    margin: 15px;
+}
+
+/* petCard {
+    width: 100%;
+    height: 100%;
+} */
