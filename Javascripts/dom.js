@@ -1,10 +1,9 @@
-const domEvents = require('./events');
-
 const outputDiv = document.getElementById('pets');
+
 let strang = '';
 const domString = (pets) => {
   pets.forEach((pets) => {
-    strang += `<div class = "col-md-4 petCard">`;
+    strang += `<div class = "col-md-4 petCard ${pets.type}s">`;
     strang +=   `<div class="panel panel-default">`;
     // strang +=   `<div class="panel-heading">`;
     strang +=   `<h2 class ="panel-heading-with-title pets">${pets.name}</h2>`;
@@ -21,7 +20,6 @@ const domString = (pets) => {
 
 const prinToDom = (petArray) => {
   outputDiv.innerHTML = domString(petArray);
-  domEvents();
 };
 
 module.exports = prinToDom;
