@@ -29,6 +29,10 @@ body {
 
 }
 
+.hidden{
+    display:none;
+}
+
 .panel {
     /* border: solid 1px lightgray; */
     text-align: center;
