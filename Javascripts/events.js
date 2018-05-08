@@ -1,39 +1,35 @@
-const data = require('./dataGateKeeper');
+const data = require('./data');
+const printToDom = require('./dom');
 
-console.log(data.getPets());
+let petArray = [];
 
-// wrap it with eventlistner function
 const selectedPet = (e) => {
-  const petName = e.target.innerHTML.toLowerCase();
-  const allPets = document.getElementsByClassName('petCard');
-  for (let m = 0; m < allPets.length; m++) {
-    allPets[m].classList.add('hidden');
+  const petClicked = e.target.id;
+  console.log(petClicked);
+  const newArray = [];
+  petArray = data.getPets();
+  console.log (petArray);
+  for (let i = 0; i < petArray.length; i++) {
+    if (petClicked === petArray[i].type) {
+      console.log(petArray[i].type);
+      newArray.push(petArray[i]);
+      console.log(newArray);
+    };
   };
-  const chosenPet = document.getElementsByClassName(`${petName}`);
-  for (let j = 0; j < chosenPet.length; j++) {
-    chosenPet[j].classList.remove('hidden');
-    console.log(chosenPet[j]);
-  };
-
-  console.log(chosenPet);
-  console.log(petName);
-  // petName.style.display = 'inline';
-  // selectedPet.classList
+  printToDom(newArray);
 };
 
-module.exports.addEvents = () => {
-  const allButtons = document.getElementsByClassName('button');
-  const petsCard = document.getElementsByClassName('pet');
+const reset = () => {
+  printToDom(petArray);
+};
+
+const addEvents = () => {
+  const allButtons = document.getElementsByClassName('petButton');
+  const resetButton = document.getElementById('reset');
   for (let i = 0; i < allButtons.length; i++) {
     allButtons[i].addEventListener('click', selectedPet);
-    console.log(allButtons[i]);
-    if (allButtons[i] === 'cat') {
-      console.log(allButtons);
-      petsCard[i].type.cats.style.display = 'block';
-    } else if (allButtons[i] === 'dog') {
-      petsCard[i].type.dog.display = 'block';
-    } else if (allButtons[i] === 'dino') {
-      petsCard[i].type.dino.display = 'block';
-    } else selectedPet;
-  }
+    resetButton.addEventListener('click', reset);
+  };
 };
+
+module.exports = addEvents;
