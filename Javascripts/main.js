@@ -1,5 +1,5 @@
 const data = require('./dataGateKeeper');
-const events = require ('./events');
+const addEvents = require ('./events');
 
 data.initializer();
-events.addEvents();
+addEvents();
