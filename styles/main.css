@@ -6,26 +6,53 @@ body {
 }
 
 .petImage{
-    width: 50%;
+    width:45%;
     border: 1px solid lightgray;
 }
-#catButton {
+
+#catbtn {
     background-color:lightblue;
     color: white;
     margin-right: 20px;
-
 }
 
-#dogButton {
-    background-color: lightgreen;
+#dogbtn {
+    background-color:lightgreen;
     color: white;
     margin-right: 20px;
-
 }
-#dinoButton {
+
+#dinobtn {
+    background-color:lightblue;
+    color: white;
+    margin-right: 20px;
+}
+
+#cat {
+    background-color:lightblue;
+    color: white;
+    margin-right: 20px;
+    width: 100%;
+    height: 16%;
+    font-size: 2em;
+}
+
+#dog { 
     background-color: lightsalmon;
     color: white;
     margin-right: 20px;
+    width: 100%;
+    height: 16%;
+    font-size: 2em;
+
+}
+#dino {
+    background-color: lightsalmon;
+    color: white;
+    margin-right: 20px;
+    width: 100%;
+    height: 16%;
+    font-size: 2em;
 
 }
 
@@ -40,7 +67,3 @@ body {
     margin: 15px;
 }
 
-/* petCard {
-    width: 100%;
-    height: 100%;
-} */

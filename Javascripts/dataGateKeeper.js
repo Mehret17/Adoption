@@ -1,22 +1,24 @@
 const loadPets = require('./pets');
-const printToDom = require('./dom');
+const dom = require('./dom');
 const data = require('./data');
+const addEvents = require('./events');
 
-let petArray = [];
+let allPets = [];
 const whenPetsLoad = function () {
-  petArray = JSON.parse(this.responseText).pets;
-  data.setPets(petArray);
-  printToDom(petArray);
-  console.log(petArray);
+  allPets = JSON.parse(this.responseText).pets;
+  data.setPets(allPets);
+  dom(allPets);
+  addEvents(data);
+  console.log(allPets);
 };
 
 const badPets = function () {
   console.error('something is wrong');
 };
 
-const getPets = () => {
-  return petArray;
-};
+// const getPets = () => {
+//   return petArray;
+// };
 
 const initializer = () => {
   loadPets(whenPetsLoad, badPets);
@@ -24,5 +26,4 @@ const initializer = () => {
 
 module.exports = {
   initializer,
-  getPets,
 };
